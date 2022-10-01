@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
+
 public class ControladorInicio {
     
          //despues de crear mi Dao, debo inyectar mi clase al controlador.  //para inyectar a nuestra vista loginadmin, le damos Autowired: voy a usar mi propia clase

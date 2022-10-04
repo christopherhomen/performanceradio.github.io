@@ -46,7 +46,7 @@
       <div class="hero-container-play">
         <!-- <div class="logo-banner" ><img src="assets/img/logo/logo1.png" class="logo-banner-mobile" id="logo-header">
         </div> -->
-        <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo/logo1.png" alt="" class="img-fluid"></a>
+        <a href="#" class="logo me-auto me-lg-0"><img src="assets/img/logo/logo1.png" alt="" class="img-fluid"></a>
         <!-- <a href="#about" class="btn-get-started scrollto">Get Started</a> -->
 
         <!-- boton play -->
@@ -67,7 +67,7 @@
 
       <!-- <h1 class="logo me-auto me-lg-0"><a href="index.html"><img src="assets/img/logo/logo3.png" alt=""></a></h1> -->
       <!-- Uncomment below if you prefer to use an image logo -->
-        <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo/logo3.png" alt="" class="img-fluid"></a>
+        <a href="#" class="logo me-auto me-lg-0"><img src="assets/img/logo/logo3.png" alt="" class="img-fluid"></a>
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
@@ -81,7 +81,7 @@
           <li class="dropdown" ><a class="active" href="#"><span>Usuario</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a th:href="@{/login}">Iniciar Sesión</a></li>
-              <li><a href="register.html">Registro</a></li>
+              <li><a th:href="@{/crear}">Registro</a></li>
           
             </ul>
           </li>
@@ -121,23 +121,25 @@
 
      <section class="inner-page">
       <div class="container">
-        <p>
-          Bienvenidos inicio de sesión
-        </p>
+       <!-- <p>
+          Bienvenidos
+        </p>-->
         
         
 
                     <div class="formularioiniciosesion">
+                        <h2 style="text-align-last: center;">Inicio Sesión</h2>
+                     <div align="center" ><img class="img-fluid logo me-auto me-lg-0" src="assets/img/logo/user3.png"></div>
                         <form method="post" th:action="@{/login}">
-                            <label for="username" style="color: antiquewhite;">Usuario</label>
+                            <label for="username">Usuario</label>
                             <input type="text" id="username" name="username" placeholder="Su usuario...">
 
-                            <label for="password" style="color: antiquewhite;">Password</label>
+                            <label for="password">Password</label>
                             <input type="password" id="password" name="password" placeholder="Su password...">
 
                             <input type="submit" value="Iniciar Sesión">
                         </form>
-                        <a th:href="@{/register}">¿No tienes Usuario? Registrate</a>
+                        <a th:href="@{/crear}">¿No tienes Usuario? Registrate</a>
                     </div>
         
         
@@ -163,9 +165,11 @@
 
         <div class="row footer-newsletter justify-content-center">
           <div class="col-lg-6">
+              <!--
             <form action="" method="post">
               <input type="email" name="email" placeholder="Ingrese su Email"><input type="submit" value="Suscribir">
             </form>
+              -->
           </div>
         </div>
 

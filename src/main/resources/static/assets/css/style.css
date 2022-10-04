@@ -7,12 +7,14 @@ body {
 }
 
 a {
-  color: #ff7f5d;
+  /*color: #ff7f5d;*/
+  color: #ff3600;
   text-decoration: none;
 }
 
 a:hover {
   color: #ffa790;
+  
   
   text-decoration: none;
 }
@@ -2035,7 +2037,7 @@ input[type=text], input[type=password], input[type=number], input[type=email], s
 
 input[type=submit] {
   width: 100%;
-  background-color: #cda45e;
+  background-color: #050e0cf2;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -2057,3 +2059,8 @@ input[type=submit]:hover {
 }
 
 /*Fin estilo inicio sesión*/
+
+table {
+       display: block;
+       overflow-x: auto;
+     }

@@ -7,10 +7,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
-
 public class ControladorInicio {
     
          //despues de crear mi Dao, debo inyectar mi clase al controlador.  //para inyectar a nuestra vista loginadmin, le damos Autowired: voy a usar mi propia clase
@@ -64,5 +64,21 @@ public class ControladorInicio {
       oyenteDao.save(oyentes);
         return "redirect:loginadmin";
       }
+      
+      
+        @GetMapping("/editar/{username}")
+        //recibo una variable id cliente
+        public String editar(@PathVariable("username") String username, Model model){
+            var oyentes= oyenteDao.findById(username);
+            model.addAttribute("oyentes",oyentes);
+            return "modificar1";
+        }
+        
+        @GetMapping("/eliminar/{username}")
+        //recibo una variable id username
+        public String eliminar(@PathVariable("username") String username){
+            oyenteDao.deleteById(username);
+            return "redirect:/loginadmin";
+        }
       
 }
